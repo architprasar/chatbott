@@ -1,0 +1,226 @@
+.head {
+    width: 100%;
+    height: 60px;
+    border-bottom: 1px solid #E3E3E3;
+}
+
+.bot {
+    width: 100%;
+    height: calc(100% - 60px - 30px);
+
+}
+
+.bot_msg_body {
+    height: 90%;
+    background-color: #F0F0F0;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+
+.bot_msg_box {
+    width: 100%;
+    overflow: hidden;
+    height: 10%;
+    border-top: 1px solid #E3E3E3;
+}
+
+.bot_msg_box_input {
+    width: 75%;
+    height: 100%;
+    outline: none;
+    padding-left: 20px;
+    font-size: 15px;
+    border: none;
+    color: #000;
+    float: left;
+    font-family: "Open Sans", sans-serif;
+}
+
+.bot_msg_box_input::placeholder {
+    color: #667085
+}
+
+.bot_msg_box_send {
+    width: 25%;
+    height: 100%;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+}
+
+.anticon svg {
+    display: inline-block !important;
+    height: 30px !important;
+    width: 25px !important;
+    color: #667085;
+}
+
+.footer {
+    width: 100%;
+    height: 30px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid #E3E3E3;
+    font-size: 10px;
+    font-family: "Open Sans", sans-serif;
+}
+
+.company_icon,
+.close_chatbot {
+    width: 25%;
+    height: 100%;
+    float: left;
+    display: flex;
+    align-items: center;
+}
+
+.company_icon {
+    justify-content: flex-start;
+    padding-left: 20px;
+}
+
+.close_chatbot {
+    padding-right: 20px;
+    justify-content: flex-end;
+}
+
+.company_name {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-family: "Open Sans", sans-serif;
+    justify-content: center;
+    font-weight: bold;
+    float: left;
+}
+
+.company_avatar {
+    height: 70%;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    border: 1px solid #E3E3E3;
+}
+
+.message_container {
+    width: 100%;
+    padding: 20px 20px 0px 20px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-flow: column wrap;
+    word-break: break-all;
+    overflow-y: scroll;
+}
+
+.message_container_sender {
+    align-items: flex-end;
+
+}
+
+.message_info {
+    width: max-content;
+    font-size: 10px;
+    text-align: left;
+    color: #667085;
+    margin-bottom: 10px;
+}
+
+.message_box {
+    min-height: 50px;
+    max-width: 256px;
+    width: max-content;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-flow: column;
+    text-align: left;
+    padding: 10px 10px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    font-size: 15px;
+    word-break: keep-all;
+    font-family: "Open Sans", sans-serif;
+    border: 1px solid #E3E3E3;
+    background-color: #fff;
+}
+
+.message_box p {
+    padding: 0px 0px
+}
+
+.message_box_sender {
+    background-color: #003DF5;
+    color: #fff;
+}
+
+.product-card {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 8px;
+    margin: 8px;
+    text-align: center;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 10px;
+}
+
+.product-name {
+    font-size: 8px;
+    font-weight: bold;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.product-rating {
+    font-size: 7px;
+    color: #888;
+}
+
+.product-price {
+    font-size: 8px;
+    color: #333;
+}
+
+.product-button {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 2px 4px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 8px;
+    transition: background 0.3s;
+}
+
+.product-button:hover {
+    background: #0056b3;
+}
+
+.slick-slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slick-list {
+    padding: 0 15px;
+}
+
+.slick-track {
+    display: flex;
+    align-items: center;
+}
+
+.slick-slide {
+    display: inline-block;
+}

@@ -1,0 +1,153 @@
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<style>
+    .parallax-container {
+        position: relative;
+        height: 1000px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        scroll-snap-type: mandatory;
+        flex-flow: column;
+        overflow: hidden;
+    }
+
+    .parallax-container2 {
+        position: relative;
+        height: 4000px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-flow: column;
+        overflow: hidden;
+    }
+
+    .bottle {
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 80%;
+        /* Adjust size as needed */
+        height: 100%;
+        /* Adjust size as needed */
+        /* Bottle image path */
+
+        position: relative;
+        /* Perspective for 3D effect */
+    }
+
+    .bottle img {
+        width: 40%;
+        position: fixed;
+        z-index: 1;
+        bottom: -70%;
+        aspect-ratio: 1/1;
+        object-fit: cover;
+        transition: bottom 0.5s linear;
+
+    }
+
+    .content {
+        height: 200vh;
+    }
+
+    .active {
+        bottom: calc(90vh);
+    }
+
+    .parallax-container h1 {
+        margin: 10px 10px;
+    }
+
+    .parallax_title {
+        top: 10%;
+        position: fixed;
+        transition: bottom 0.5s linear;
+        text-align: center;
+        z-index: 2;
+
+    }
+
+    
+    .patti {
+        position: fixed;
+        top: 40%;
+        width: 50%;
+        height: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .patti img {
+        top: 40%;
+        width: 50%;
+        z-index: 0;
+        aspect-ratio: 1/1;
+    }
+</style>
+
+<div class="parallax-container">
+    <h1 class="parallax_title"> well herb<br /> Better living</h1>
+    <div class="patti"><img src="https://welherb.net/wp-content/uploads/2024/05/Group-1-1.png" /></div>
+    <div class="bottle">
+        <img src="https://welherb.net/wp-content/uploads/2024/04/PHOTO-2022-08-23-16-03-28_4-removebg-preview-1.png" />
+    </div>
+    <div class=" content">
+        <!-- Your content here -->
+    </div>
+</div>
+
+<script>
+
+    window.addEventListener('scroll', () => {
+        console.log('scrolling...');
+        const bottomImage = document.querySelector('.bottle img');
+        bottomImage.style.bottom = '0%';
+        const container = document.querySelector('.parallax-container');
+        const containerHeight = container.getBoundingClientRect().height;
+        const viewportHeight = window.innerHeight;
+
+        // Calculate the percentage
+        const percentage = ((viewportHeight - containerBottom) / viewportHeight) * 100;
+
+        // Make sure the percentage is within the 0-100 range
+        const percentageInRange = Math.max(0, Math.min(100, percentage));
+
+
+        const containerBottom = container.getBoundingClientRect().bottom;
+        const title = document.querySelector('.parallax_title');
+        const patti = document.querySelector('.patti img');
+
+
+        // Adjust the threshold as needed
+        const threshold = 200;
+
+        if (containerBottom - 100 < window.innerHeight) {
+            bottomImage.style.bottom = '100%';
+            title.style.top = '200%';
+            patti.style.top = '200%';
+
+
+
+
+
+
+
+        } else if (containerBottom - threshold > window.innerHeight) {
+            bottomImage.style.bottom = '-70%';
+            title.style.top = '10%'
+
+
+
+
+
+
+        } else {
+        }
+    });
+
+</script>
